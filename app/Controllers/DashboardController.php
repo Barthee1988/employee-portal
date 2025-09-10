@@ -9,7 +9,7 @@ class DashboardController {
     $data = [
       'leave_available' => 12,
       'loan_status' => 'No active loans',
-      'notifications' => ['Welcome to the portal!', 'Your profile is up to date.']
+      'notifications' => ['Welcome to the portal!', 'Your profile is up to date.'] 
     ];
     return View::render('dashboard/index', ['data' => $data]);
   }

@@ -14,7 +14,7 @@ public function list()
       'id'=>$r->id,
       'module'=>$r->module,
       'requester'=>$r->requester_name,
-      'level'=> "{$r->approver_level}/{$r->max_level}",
+      'level'=> "{$r->approver_level}/{$r->max_level}", 
       'created_at'=>$r->created_at
     ], $rows)
   ]);
