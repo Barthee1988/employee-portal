@@ -1,0 +1,12 @@
+# public/uploads/.htaccess
+Options -Indexes
+<FilesMatch "\.(php|phar|phtml|shtml|cgi|pl|py|js|sh)$">
+  Deny from all
+</FilesMatch>
+
+# Fallback: if Apache 2.4
+<IfModule mod_authz_core.c>
+  <FilesMatch "\.(php|phar|phtml|shtml|cgi|pl|py|js|sh)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>

@@ -1,0 +1,78 @@
+/* public/assets/css/app.css */
+
+/* Design tokens */
+:root {
+  --brand-primary: #3b82f6;   /* blue-500 */
+  --brand-secondary: #0ea5e9; /* sky-500 */
+  --brand-accent: #22c55e;    /* green-500 */
+  --brand-warning: #f59e0b;   /* amber-500 */
+  --brand-danger:  #ef4444;   /* red-500 */
+  --bg: #f8fafc;              /* slate-50 */
+  --card: #ffffff;
+  --text: #0f172a;            /* slate-900 */
+  --muted: #64748b;           /* slate-500 */
+  --radius: 12px;
+  --shadow: 0 2px 10px rgba(15,23,42,.06);
+}
+
+/* Global */
+html, body {
+  height: 100%;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Card */
+.card {
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.card-header {
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0));
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background: #fff;
+  min-height: calc(100vh - 56px);
+}
+.sidebar .nav-link {
+  border-radius: 8px;
+  color: var(--text);
+  padding: .5rem .75rem;
+}
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+  background: rgba(59,130,246,0.10);
+  color: var(--brand-primary);
+}
+
+/* Widgets */
+.fs-3 { font-weight: 700; }
+
+/* Badges and status colors */
+.badge-in-time-ontime { background: var(--brand-accent); }
+.badge-in-time-warn   { background: var(--brand-warning); color: #111; }
+.badge-in-time-late   { background: #f97316; } /* orange-500 */
+.badge-in-time-red    { background: var(--brand-danger); }
+
+/* Toast container */
+.toast-container {
+  z-index: 1080;
+}
+
+/* DataTables tweaks */
+table.dataTable tbody tr:hover {
+  background-color: rgba(59,130,246,0.06);
+}
+
+/* Responsive helpers */
+@media (max-width: 991px) {
+  .sidebar { position: fixed; z-index: 1030; height: 100vh; }
+}

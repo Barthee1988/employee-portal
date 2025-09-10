@@ -1,0 +1,12 @@
+<?php
+// app/Views/View.php
+namespace App\Views;
+
+class View {
+  public static function render(string $template, array $data = []): string {
+    extract($data);
+    ob_start();
+    include __DIR__ . '/' . $template . '.php';
+    return ob_get_clean();
+  }
+}
